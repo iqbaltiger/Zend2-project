@@ -1,0 +1,145 @@
+
+
+<?php error_reporting(0);?>
+  
+<div class="slider_area">
+    <div class="slider_wrapper">
+      <div id="camera_wrap" class="camera_wrap" style="display: block; height: 550px;"><div class="camera_fakehover"><div class="camera_src camerastarted paused">
+        <div data-src="<?php echo $this->basePath('images/slide.jpg') ?>"></div>
+        <div> <img src="<?php echo $this->basePath('images/slide.jpg') ?>"></div>
+        <div data-src="<?php echo $this->basePath('images/slide1.jpg') ?>"></div>
+        <div data-src="<?php echo $this->basePath('images/slide2.jpg') ?>"></div>
+      </div><div class="camera_target"><div class="cameraCont"><div class="cameraSlide cameraSlide_0" style="visibility: visible; display: none; z-index: 1;"><img src="<?php echo $this->basePath('images/slide.jpg') ?>" class="imgLoaded" data-alignment="" data-portrait="" width="940" height="550" style="visibility: visible; height: 550px; margin-left: 0px; margin-top: 0px; position: absolute; width: 940px;"><div class="camerarelative" style="width: 940px; height: 550px;"></div></div><div class="cameraSlide cameraSlide_1" style="display: none; z-index: 1;"><img src="./Home_files/slide1.jpg" class="imgLoaded" data-alignment="" data-portrait="" width="940" height="550" style="visibility: visible; height: 550px; margin-top: 0px; position: absolute; margin-left: 0px; width: 940px;"><div class="camerarelative" style="width: 940px; height: 550px;"></div></div><div class="cameraSlide cameraSlide_2 cameracurrent" style="display: block; z-index: 999;"><img src="./Home_files/slide2.jpg" class="imgLoaded" data-alignment="" data-portrait="" width="940" height="550" style="visibility: visible; height: 550px; margin-left: 0px; margin-top: 0px; position: absolute; width: 940px;"><div class="camerarelative" style="width: 940px; height: 550px;"></div></div><div class="cameraSlide cameraSlide_3 cameranext" style="z-index: 1; display: none;"><div class="camerarelative" style="width: 940px; height: 550px;"></div></div></div></div><div class="camera_overlayer"></div><div class="camera_target_content"><div class="cameraContents"><div class="cameraContent" style="display: none;"></div><div class="cameraContent" style="display: none;"></div><div class="cameraContent cameracurrent" style="display: block;"></div></div></div><div class="camera_bar" style="display: none; top: auto; height: 7px;"><span class="camera_bar_cont" style="opacity: 0.8; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; background-color: rgb(34, 34, 34);"><span id="pie_0" style="opacity: 0.8; position: absolute; background-color: rgb(238, 238, 238); left: 0px; right: 0px; top: 2px; bottom: 2px; display: none;"></span></span></div><div class="camera_commands"><div class="camera_play" style="display: block;"></div><div class="camera_stop" style="display: none;"></div></div></div><div class="camera_loader" style="display: none; visibility: visible;"></div></div> 
+      
+    <div class="search_block">
+        <h2>Find Apartments For Rent</h2>
+        <form id="form1" method="post">
+           <label class="input1"> 
+            <input type="text" value="City, State, ZIP or Country" onfocus="if(this.value==&quot;City, State, ZIP or Country&quot;)this.value=&quot;&quot;;" onblur="if(this.value==&quot;&quot;)this.value=&quot;City, State, ZIP or Country&quot;;">
+          </label>
+           <label class="input"> 
+            <span>Bedrooms:</span>
+            <input type="text" value="any" onfocus="if(this.value==&quot;any&quot;)this.value=&quot;&quot;;" onblur="if(this.value==&quot;&quot;)this.value=&quot;any&quot;;">
+          </label>
+           <label class="input"> 
+            <span>Bathrooms:</span>
+            <input type="text" value="any" onfocus="if(this.value==&quot;any&quot;)this.value=&quot;&quot;;" onblur="if(this.value==&quot;&quot;)this.value=&quot;any&quot;;">
+          </label>
+           <label class="input"> 
+            <span>Rent Max:</span>
+            <input type="text" value="any" onfocus="if(this.value==&quot;any&quot;)this.value=&quot;&quot;;" onblur="if(this.value==&quot;&quot;)this.value=&quot;any&quot;;">
+          </label>
+          <div class="alright"><a onclick="document.getElementById(&#39;form1&#39;).submit()" href="./Home_files/Home.htm" class="btn">Search</a></div>
+        </form>
+     </div>
+    </div>
+</div>
+      
+</header>
+    
+
+<!--=======content================================-->
+
+<div class="content page1">
+  <div class="container_12">
+    <div class="grid_4">
+      <div class="page1_box">
+        <h2>Categories</h2>
+        <ul class="list">
+          <li><a href="./Home_files/Home.htm">BUSINESS</a></li>
+          <li><a href="./Home_files/Home.htm">RECREATION</a></li>
+          <li><a href="./Home_files/Home.htm">City</a></li>
+          <li><a href="./Home_files/Home.htm">beach</a></li>
+          <li><a href="./Home_files/Home.htm">FAMILY</a></li>
+        </ul>
+        <h3>Destinations</h3>
+        <ul class="list1">
+          <li><a href="./Home_files/Home.htm">new york</a></li>
+          <li><a href="./Home_files/Home.htm">Frankfurt</a></li>
+          <li><a href="./Home_files/Home.htm">Brussels</a></li>
+          <li><a href="./Home_files/Home.htm">Dubai</a></li>
+          <li><a href="./Home_files/Home.htm">Vienna</a></li>
+          <li><a href="./Home_files/Home.htm">Istanbul</a></li>
+          <li><a href="./Home_files/Home.htm">Berlin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid_8">
+      <h2>Featured offers</h2>
+      <div class="boxes">
+        <div class="grid_4 alpha">
+            
+            <?php foreach($sellers as $seller) : ?>
+            
+          <div class="box "><div class="maxheight" style="height: 275px;"><div class="box_inner">
+                      
+                       <?php 
+                       
+                     
+                       
+                        $imageName = $seller->property_image;
+                       
+                             $baseurl = $this->basePath().'/tmpuploads/';
+                       
+                             $imageDestination = $baseurl.$imageName;
+                       ?>
+            <img src="<?php echo $imageDestination; ?>" alt="" class="img_inner">
+           
+            <div class="fr">
+              <div class="price">$<?php echo $this->escapeHtml($seller->property_price);?></div>
+              <a href="<?php echo $this->url('seller') ?>/details/<?php echo $this->escapeHtml($seller->id);?>" class="btn">More</a>
+            </div><p class="text1"><?php echo $this->escapeHtml($seller->property_title);?></p>
+            <?php echo $this->escapeHtml($seller->property_description);?>
+          </div></div></div>
+            
+            <?php endforeach; ?>
+            
+        </div>
+<!--        <div class="grid_4 omega">
+          <div class="box maxheight" style="height: 275px;"><div class="box_inner"><div class="maxheight" style="height: 275px;"><div class="box_inner">
+            <img src="<?php echo $this->basePath('img/page1_img2.jpg') ?>" alt="" class="img_inner">
+            
+            <div class="fr">
+              <div class="price">$425</div>
+              <a href="./Home_files/Home.htm" class="btn">More</a>
+            </div><p class="text1">Lorem ipsum dolor</p>Сonsectetur adipisicing elit, sed do eiusmod tempor
+          </div></div></div></div>
+        </div>
+        <div class="clear"></div>-->
+<!--        <div class="grid_4 alpha">
+          <div class="box"><div class="maxheight1" style="height: 271px;"><div class="box_inner">
+            <img src="<?php echo $this->basePath('img/page1_img3.jpg') ?>" alt="" class="img_inner">
+            
+            <div class="fr">
+              <div class="price">$386</div>
+              <a href="./Home_files/Home.htm" class="btn">More</a>
+            </div><p class="text1">consectetur adipisicing</p>Adipisicing elit, sed do eiusmod tempor incididunt 
+          </div></div></div>
+        </div>-->
+<!--        <div class="grid_4 omega">
+          <div class="box"><div class="maxheight1" style="height: 271px;"><div class="box_inner">
+            <img src="<?php echo $this->basePath('img/page1_img4.jpg') ?>" alt="" class="img_inner">
+           
+            <div class="fr">
+              <div class="price">$305</div>
+              <a href="./Home_files/Home.htm" class="btn">More</a>
+            </div> <p class="text1">dolor sit amet</p>Lorem ipsum dolor sit amet, consectetur 
+          </div></div></div>
+        </div>-->
+      </div>
+    </div>
+    <div class="grid_12">
+      <h2 class="head1">How does this work?</h2>
+      <div class="bottom_block">
+        <ul>
+          <li><a href="./Home_files/Home.htm"><span>1</span></a>Choose a direction</li>
+          <li><a href="./Home_files/Home.htm"><span>2</span></a>SELECT APARTMENTS</li>
+          <li><a href="./Home_files/Home.htm"><span>3</span></a>BOOK ONLINE</li>
+          <li><a href="./Home_files/Home.htm"><span>4</span></a>Make Payments</li>
+          <li><a href="./Home_files/Home.htm"><span>5</span></a>Enjoy your stay!</li>
+        </ul>
+      </div>
+    </div>  
+  </div>
+</div>
+

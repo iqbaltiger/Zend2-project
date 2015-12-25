@@ -1,0 +1,42 @@
+<?php
+$title = 'Delete User';
+$this->headTitle($title);
+?>
+
+<?php if(!$this->zfcUserIdentity()): ?>
+    <!-- display the login form -->
+    
+    <h2>Please Login</h2>
+    <br/>
+    
+    <?php $redirect = $this->url('home').'admin/delete/'.$this->id;?>
+    
+    <?php echo $this->zfcUserLoginWidget(array('redirect'=>$redirect)); ?>
+<?php else: ?>
+
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+
+<p>Are you sure that you want to delete:</p> 
+    <div><b>User Name:</b> <span style="color: red;"><?php echo $this->escapeHtml($user->username); ?>'</span> </div> 
+ <div><b>Email:</b> <span style="color: red;"><?php echo $this->escapeHtml($user->email); ?>'</span></div>
+ <br/>
+ 
+
+<?php 
+$url = $this->url('admin', array('action' => 'delete', 'id'=>$this->id)); ?>
+<form action="<?php echo $url; ?>" method="post">
+<div>
+  <input type="hidden" name="id" value="<?php echo (int)$user->user_id; ?>" />
+  </div>
+    <div style="float: left;">  
+  <input type="submit" name="del" value="Yes" />
+  </div>
+    
+   <div style="float: left;"> 
+  <input type="submit" name="del" value="No" />
+  
+   </div>
+
+</form>
+
+ <?php endif;?>

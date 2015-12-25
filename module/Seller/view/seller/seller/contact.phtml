@@ -1,0 +1,83 @@
+<div class="content">
+  <div class="container_12">
+    <div class="grid_8">
+      <div class="pad1">
+        <h2>stay in touch</h2>
+              <div class="map">
+              <figure class="img_inner">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11367.044234552153!2d-116.65641064427726!3d44.58145722243403!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54a5c1b36c86e151%3A0x4644668124a9c4b9!2sMill+Rd!5e0!3m2!1sen!2s!4v1400340411556" width="600" height="450" frameborder="0" style="border:0"></iframe>
+                 </figure>
+                <address>
+                              <dl>
+                                  <dt>
+                                      <div class="text1">8901 Marmora Road,<br>
+                                      Glasgow, D04 89GR.</div>
+                                  </dt>
+                                  <dd><span>Freephone:</span>+1 800 559 6580</dd>
+                                  <dd><span>Telephone:</span>+1 959 603 6035</dd>
+                                  <dd><span>FAX:</span>+1 504 889 9898</dd>
+                                  <dd>E-mail: <a class="link-1" href="http://livedemo00.template-help.com/wt_45034/index-4.html#">mail@demolink.org</a></dd>
+                              </dl>
+                           </address>
+                           <address class="m0">
+                              <dl>
+                                  <dt>
+                                      <div class="text1">9863 - 9867 Mill Road,<br>
+                        Cambridge, MG09 99HT.</div>
+                                  </dt>
+                                  <dd><span>Freephone:</span>+1 800 559 6580</dd>
+                                  <dd><span>Telephone:</span>+1 959 603 6035</dd>
+                                  <dd><span>FAX:</span>+1 504 889 9898</dd>
+                                  <dd>E-mail: <a class="link-1" href="http://livedemo00.template-help.com/wt_45034/index-4.html#">mail@demolink.org</a></dd>
+                              </dl>
+                           </address>
+            </div>
+      </div>
+    </div>
+    <div class="grid_4">
+      <h2>contact form</h2>
+       <?php $form->prepare(); // The correct enctype is set here ?>
+      <?php echo $this->form()->openTag($form); ?>
+
+      <?php  $form->setAttribute('action', $this->url('seller', array('action' => 'contact')));?>
+      
+      
+    
+      
+      <form id="form">
+      <div class="success_wrapper">
+      <div style="display: none;" class="success">Contact form submitted!<br>
+      <strong>We will be in touch soon.</strong> </div></div>
+      <fieldset>
+      <label class="name">
+      <?php echo $this->formRow($form->get('user_name')); ?>    
+     
+      <br class="clear">
+      <span style="display: none;" class="error error-empty">*This is not a valid name.</span><span style="display: none;" class="empty error-empty">*This field is required.</span> </label>
+      <label class="email">
+      <?php echo $this->formRow($form->get('user_email')); ?> 
+      <br class="clear">
+      <span style="display: none;" class="error error-empty">*This is not a valid email address.</span><span style="display: none;" class="empty error-empty">*This field is required.</span> </label>
+      <label class="phone">
+           <?php echo $this->formRow($form->get('user_phone')); ?> 
+
+      <br class="clear">
+      <span style="display: none;" class="error error-empty">*This is not a valid phone number.</span><span style="display: none;" class="empty error-empty">*This field is required.</span> </label>
+      <label class="message">
+      <?php echo $this->formRow($form->get('user_message')); ?> 
+      <br class="clear">
+      <span style="display: none;" class="error">*The message is too short.</span> <span style="display: none;" class="empty">*This field is required.</span> </label>
+      <div class="clear"></div>
+      <div class="btns">
+          
+<!--          <a class="btn" data-type="reset">clear</a><a class="btn" data-type="submit">send</a>-->
+          
+          
+           <?php echo $this->formRow($form->get('submit')); ?>
+      <div class="clear"></div>
+      </div></fieldset>
+          
+      <?php echo $this->form()->closeTag(); ?>    
+    
+  </div>
+</div>

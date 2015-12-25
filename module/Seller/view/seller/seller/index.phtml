@@ -1,0 +1,87 @@
+<?php if(!$this->zfcUserIdentity()): ?>
+    <!-- display the login form -->
+    <?php echo $this->zfcUserLoginWidget(array('redirect'=>'application')); ?>
+<?php else: ?>
+<style type="text/css">
+    
+    label{width:150px;float:left;font-weight: bold;}
+    .field_container{margin-top:8px;}
+    
+    .form_container{width:400px;margin: 0px auto;margin-top: 20px; height: 500px;}
+    
+</style>
+<div class="form_container">
+    
+  <?php $form->prepare(); // The correct enctype is set here ?>
+<?php echo $this->form()->openTag($form); ?>
+
+    <div class="field_container">
+    
+        <label>Property Title</label>
+        <div><?php echo $this->formRow($form->get('property_title')); ?></div>
+    
+    </div>
+   
+    <div class="field_container">
+    
+    <label>Property Description</label>
+    <div><?php echo $this->formRow($form->get('property_description')); ?></div>
+    
+    </div>
+   
+    <div class="field_container">
+    <label>Property Price</label>
+    <div><?php echo $this->formRow($form->get('property_price')); ?></div>
+    
+    </div>
+    
+     <div class="field_container">
+    <label>Number of Bath Rooms</label>
+    <div><?php echo $this->formRow($form->get('bathroom_number')); ?></div>
+    
+    </div>
+    
+     <div class="field_container">
+    <label>Number of Bed Rooms</label>
+    <div><?php echo $this->formRow($form->get('bedroom_number')); ?></div>
+    
+    </div>
+    
+    <div class="field_container">
+    <label>State</label>
+    <div><?php echo $this->formRow($form->get('state')); ?></div>
+    
+    </div>
+    
+    <div class="field_container">
+    <label>City</label>
+    <div><?php echo $this->formRow($form->get('city')); ?></div>
+    
+    </div>
+    
+    <div class="field_container">
+    <label>Zip</label>
+    <div><?php echo $this->formRow($form->get('zip')); ?></div>
+    
+    </div>
+    
+    <div class="field_container">
+    <label>Country</label>
+    <div><?php echo $this->formRow($form->get('country')); ?></div>
+    
+    </div>
+    
+    <div class="form-element" style="margin-top: 10px;">
+        <?php $fileElement = $form->get('image-file'); ?>
+        <?php echo $this->formLabel($fileElement); ?>
+        <?php echo $this->formFile($fileElement); ?>
+        <?php echo $this->formElementErrors($fileElement); ?>
+    </div>
+
+    <button>Submit</button>
+
+<?php echo $this->form()->closeTag(); ?>
+
+</div>
+
+<?php endif?>

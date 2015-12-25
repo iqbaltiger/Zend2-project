@@ -1,0 +1,173 @@
+<?php echo $this->doctype(); ?>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Home</title>
+        <?php
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+
+        <?php
+        echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                ->prependStylesheet($this->basePath() . '/css/style.css')
+                ->prependStylesheet($this->basePath() . '/css/camera.css')
+                ->prependStylesheet($this->basePath() . '/css/root-bootstrap.min.css')
+                ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css');
+        ?>
+
+
+        <?php
+        echo $this->headScript()
+                ->prependFile($this->basePath() . '/js/jquery-migrate-1.1.1.js')
+                ->prependFile($this->basePath() . '/js/script.js')
+                ->prependFile($this->basePath() . '/js/superfish.js')
+                ->prependFile($this->basePath() . '/js/jquery.equalheights.js')
+                ->prependFile($this->basePath() . '/js/jquery.mobilemenu.js')
+        ;
+        ?>
+
+
+
+        <script type="text/javascript" async="" src="./Home_files/ga.js"></script><script src="./Home_files/jquery.js"></script>
+
+
+
+
+
+
+        <?php
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1.0,user-scalable=0')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+        <!--[if lt IE 8]>
+          <div style=' clear: both; text-align:center; position: relative;'>
+            <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+              <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+            </a>
+         </div>
+       <![endif]-->
+        <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+          <link rel="stylesheet" media="screen" href="css/ie.css">
+          <link rel="stylesheet" media="screen" href="css/ie.css">
+          <link href='//fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
+          <link href='//fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
+          <link href='//fonts.googleapis.com/css?family=Lato:800' rel='stylesheet' type='text/css'>
+        <![endif]-->
+    </head>
+    <body class="page1">
+
+        <!--==============================header=================================-->
+        <header> 
+            <div class="header_area"> 
+
+                <div class="container_12">
+                    <div class="grid_12">
+                        <h1><a href="<?php echo $this->url('home'); ?>"><img src="<?php echo $this->basePath('img/logo.png') ?>" alt="Rent For Me"></a> </h1>
+
+
+
+
+
+
+                        <div class="socials">
+
+
+                            <a href="./Home_files/Home.htm"></a>
+                            <a href="./Home_files/Home.htm"></a>
+                            <a href="./Home_files/Home.htm"></a>
+                            <a href="./Home_files/Home.htm"></a>
+                            <a href="./Home_files/Home.htm"></a>
+                        </div>
+
+
+
+
+                        <?php if (!$this->zfcUserIdentity()): ?>     
+                            <div align="right">
+                                <a href="<?php echo $this->url('user/login'); ?>"><img src="<?php echo $this->basePath('images/login.png') ?>"></a><a href="<?php echo $this->url('user/register'); ?>"><img src="<?php echo $this->basePath('images/register.png') ?>"></a>  
+                            </div>
+
+                        <?php else: ?>
+                            <a href="<?php echo $this->url('user/logout'); ?>">Logout</a> 
+
+                            <h2><a href="<?php echo $this->url('seller'); ?>">Upload Your Property</a></h2> 
+
+                        <?php endif; ?>
+
+
+                        <div class="menu_block">
+                            <nav class="">
+                                <ul class="sf-menu sf-js-enabled">
+                                    <li class="current"><a href="<?php echo $this->url('properties'); ?>">Properties </a></li>
+                                    <li class="with_ul">
+
+                                        <a href="<?php echo $this->url('faq'); ?>" class="sf-with-ul">FAQ<span class="menu-arrow"></span></a><ul style="display: none;">
+                                            <li><a href="./Home_files/Home.htm" class="sf-with-ul">Lorem ipsum
+                                                    <span class="menu-arrow"></span></a>
+
+
+
+<!--                       <a href="#" class="sf-with-ul">Services<span class="menu-arrow"></span></a><ul style="display: none;">
+  <li><a href="./Home_files/Home.htm" class="sf-with-ul">Lorem ipsum
+<span class="menu-arrow"></span></a>-->
+                                                <ul style="display: none;">
+                                                    <li><a href="./Home_files/Home.htm">dolor sit
+                                                        </a></li>
+                                                </ul>
+                                            </li>
+                                        </ul></li>
+                                    <li><a href="<?php echo $this->url('about'); ?>">About us</a></li>
+                                    <li><a href="#">Our portfolio</a></li>
+                                    <li><a href="<?php echo $this->url('contact'); ?>">Contacts </a></li>
+                                </ul>
+                            </nav>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <!--                        <div>-->
+
+            <?php echo $this->content; ?>
+            <hr>
+
+
+            <!--                        </div>-->
+
+
+            <!--==============================footer=================================-->
+
+            <footer>    
+                <div class="container_12">
+                    <div class="grid_4">
+                        <h3>News</h3>
+                        <p><span class="upp">Lorem ipsum</span>   dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <strong><a href="./Home_files/Home.htm">incididunt ut labore</a></strong>
+                            <em>1 hour ago</em></p>
+                        <span class="upp">et dolore </span> magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <strong><a href="./Home_files/Home.htm">laboris nisi ut aliqui</a></strong>
+                        <em>3 hours ago</em>
+                    </div>
+                    <div class="grid_4">
+                        <h3>Welcome</h3>
+                        <div class="upp">Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </div>
+                    <div class="grid_4">
+                        <div class="copy">
+                            <h3>Copyright</h3>
+                            <a href="#">Auction     </a>© 2014 All Rights Reserved | Web Developed By <a href="#">Web Dreams</a> <!--{%FOOTER_LINK} -->
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </footer>
+
+
+
+
+    </body></html>

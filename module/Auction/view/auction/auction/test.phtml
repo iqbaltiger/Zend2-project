@@ -1,0 +1,9 @@
+<?php $form = $this->form;?>
+
+<?php  
+$form->prepare();
+echo $this->form()->openTag($form) . PHP_EOL;
+
+echo $this->formCollection($form); ?>
+
+    <div><?php echo $this->form()->closeTag($form) . PHP_EOL;?></div>

@@ -1,0 +1,11 @@
+<!-- Test if the User is connected -->
+<?php if(!$this->zfcUserIdentity()): ?>
+    <!-- display the login form -->
+    <?php echo $this->zfcUserLoginWidget(); ?>
+<?php else: ?>
+    <!-- display the 'display name' of the user -->
+    <h2/><?php echo $this->zfcUserIdentity()->getEmail(); ?></h2>
+<?php endif?>
+
+
+<h2>This is from Service Page</h2>

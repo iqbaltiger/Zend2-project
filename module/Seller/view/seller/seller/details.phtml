@@ -1,0 +1,129 @@
+<style type="text/css">
+    
+    span{color:#000;}
+</style> 
+
+
+  <?php 
+    
+    $property_details = $this->property_details;
+    ?>
+<div class="content" >
+
+    <div class="container_12">
+        <div class="grid_8">
+            <div class="pad1">
+                <h2>Property details</h2>
+                <!-- Place somewhere in the <body> of your page -->
+                <div class="flexslider" id="carousel">
+                    <ul class="slides">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li><img alt="" src="<?php echo $this->basePath(); ?>/tmpuploads/<?php echo $property_details->property_image;?>"></li>
+                        <!-- items mirrored twice, total of 12 -->
+                    </ul>
+                </div>
+                <div class="text1"><strong>Descriptions:</strong></div>
+                <p>Welcome to the private community of Twenty Place, this premium freshly painted one bedroom unit features 9 foot coved ceilings in the open concept living and dining room, enhanced with a corner gas fireplace and walk out access to the private, partially fenced rear yard. The main level is complimented with a well appointed eat in oak kitchen, flooded with natural light from a large bay window and a two piece powder room. - See more at: http://gordonsestateservices.com/property/28-twentyplace#sthash.5FcxXZUs.dpuf</p>
+                <h2 class="head2">More Details</h2>
+                <p class="p1">Lorem ipsum dolor sitemen amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim minim veniam quis nostrud exercitato ullamco laboris nisi ut aliquip ex ea comm odo consequa uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occa ecat cupidatat non proident, sunt in culpa qui officia.</p>
+            </div>
+            <div class="clear">Map Here</div>
+
+        </div>
+        <div class="grid_4">
+            <h2>&nbsp;</h2>
+            <ul class="list2">
+                <li>
+                    <div class="extra_wrapper">
+                        <div class="text1">Bedroom: <span><?php echo $this->escapeHtml($property_details->bedroom_number);?></span></div></div>
+                </li>
+                <li>
+                    <div class="extra_wrapper">
+                        <div class="text1">Bathroom: <span><?php echo $this->escapeHtml($property_details->bathroom_number);?></span></div></div>
+                </li>
+                
+                <li>
+                    <div class="extra_wrapper">
+                        <div class="text1">Price: <span>$<?php echo $this->escapeHtml($property_details->property_price);?></span></div></div>
+                </li>
+                
+                 <li>
+                    <div class="extra_wrapper">
+                        <div class="text1">Country: <span><?php echo $this->escapeHtml($property_details->country);?></span></div></div>
+                </li>
+                
+                
+                 <li>
+                    <div class="extra_wrapper">
+                        <div class="text1">State: <span><?php echo $this->escapeHtml($property_details->state);?></span></div></div>
+                </li>
+                
+                
+                <li>
+                    <div class="extra_wrapper">
+                        <div class="text1">City: <span><?php echo $this->escapeHtml($property_details->city);?></span></div></div>
+                </li>
+                
+                 <li>
+                    <div class="extra_wrapper">
+                        <div class="text1">Zip: <span><?php echo $this->escapeHtml($property_details->zip);?></span></div></div>
+                </li>
+                
+                <li>
+                    <div class="extra_wrapper">
+                        <div class="text1">Garage: </div></div>
+                </li>
+                <li>
+                    <div class="extra_wrapper">
+                        <div class="text1">Car:</div></div>
+                </li>
+                <li>
+                    <div class="extra_wrapper">
+                        <div class="text1">Email us for this properties</div></div>
+                        
+                          <?php if(!$this->zfcUserIdentity()): ?>
+    <!-- display the login form -->
+    
+    <h2>Please Login</h2>
+    <br/>
+    
+    <?php echo $this->zfcUserLoginWidget(array('redirect'=>'application')); ?>
+<?php else: ?>
+    
+    <div class="form_container">
+  <?php $form->prepare(); // The correct enctype is set here 
+  
+  $form->setAttribute('action', $this->url('seller', array('action' => 'details')));
+  
+  ?>
+<?php echo $this->form()->openTag($form); ?>
+
+    <div class="field_container">
+    
+        <label>Email Address:</label>
+        <div><?php echo $this->formRow($form->get('user_email')); ?></div>
+    
+    </div>
+   
+    
+
+    <button>Submit</button>
+
+<?php echo $this->form()->closeTag(); ?>
+
+</div>
+
+<?php endif?>
+                        
+                        
+                    <a href="http://livedemo00.template-help.com/wt_45034/index-2.html#">Icing elit, sed do eiusmod tempor incididunt ut labore et doloreme magna aliqua. Utem enim minim veniam quis nostrud exercita tion ullamco laboris nisi utaliquip ex ea commodo consequa uis aute.</a>
+                </li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+</div>

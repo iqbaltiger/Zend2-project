@@ -1,0 +1,78 @@
+
+
+<?php //foreach($users as $user) : ?>
+
+<?php //echo $this->escapeHtml($user->email);?>
+<?php //endforeach; ?>
+
+<?php if(!$this->zfcUserIdentity()): ?>
+    <!-- display the login form -->
+    
+    <h2>Please Login</h2>
+    <br/>
+    
+    <?php $redirect = $this->url('home').'admin/index';?>
+    
+    <?php echo $this->zfcUserLoginWidget(array('redirect'=>$redirect)); ?>
+<?php else: ?>
+
+
+<h2 class="grid_12">User List</h2>
+
+
+<div class="clear"></div>
+
+<div class="grid_12">
+    <div class="box">
+        <div class="header">
+            <img src="<?php echo $this->basePath(); ?>/admininterface/img/icons/packs/fugue/16x16/shadeless/table-excel.png" width="16" height="16">
+            <h3>Datatables</h3><span></span>
+        </div>
+        <div class="content">
+            <table id="table-example" class="table">
+                <thead>
+                    <tr>
+                        <th>Status</th>  		 
+                        <th>User Name</th>
+                        <th>Email</th>
+
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <?php foreach ($users as $user) : ?>
+
+                        <tr class="gradeX">
+                            <td><?php if ($user->state == '1') {
+                        echo "Active";
+                    } else {
+                        echo "INACTIVE";
+                    } ?></td>	 
+                            <td><?php echo $this->escapeHtml($user->username); ?></td>
+                            <td><?php echo $this->escapeHtml($user->email); ?></td>
+                            <td><a href="<?php echo $this->url('admin', array('action' => 'edit', 'id' => $user->user_id));
+                               ?>">Edit</a></td>
+
+                            <td class="center"> <a href="<?php echo $this->url('admin',
+            array('action'=>'delete', 'id' => $user->user_id));?>">Delete</a></td>
+                        </tr>
+
+<?php endforeach; ?>
+<!--										<tr class="gradeC">
+        <td>Trident</td>
+        <td>Internet Explorer 5.0</td>
+        <td>Win 95+</td>
+        <td class="center">5</td>
+        <td class="center">C</td>
+</tr>-->
+
+                </tbody>
+            </table>
+        </div> <!-- End of .content -->
+        <div class="clear"></div>
+    </div> <!-- End of .box -->
+</div> <!-- End of .grid_12 -->
+
+<?php endif;?>

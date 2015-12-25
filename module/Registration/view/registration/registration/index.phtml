@@ -1,0 +1,95 @@
+<?php if(!$this->zfcUserIdentity()): ?>
+    <!-- display the login form -->
+    <?php echo $this->zfcUserLoginWidget(array('redirect'=>'application')); ?>
+<?php else: ?>
+<style type="text/css">
+    
+    label{width:150px;float:left;}
+    .field_container{margin-top:8px;}
+    
+    .form_container{width:400px;margin: 0px auto;margin-top: 20px; height: 500px;}
+    
+</style>
+<div class="form_container">
+    
+    <?php
+  $form = $this->form;
+$form->setAttribute('action', $this->url('registration', array('action' => 'index')));
+$form->prepare();
+echo $this->form()->openTag($form);
+?>
+<h2>Registration Form</h2>
+
+<div class="field_container">
+    <label><b>First Name</b></label>
+    <?php echo $this->formRow($form->get('first_name')); ?>
+    
+</div>
+
+<div class="field_container">
+    <label><b>Last Name</b></label>
+    <?php echo $this->formRow($form->get('last_name')); ?>
+    
+</div>
+
+<div class="field_container">
+    <label><b>Password</b></label>
+    <?php echo $this->formRow($form->get('user_pass')); ?>
+    
+</div>
+
+<div class="field_container">
+    <label><b>Confirm Password</b></label>
+    <?php echo $this->formRow($form->get('conf_pass')); ?>
+    
+</div>
+
+<div class="field_container">
+    <label><b>Email</b></label>
+    <?php echo $this->formRow($form->get('user_email')); ?>
+    
+</div>
+
+<div class="field_container">
+    <label><b>Country</b></label>
+    <?php echo $this->formRow($form->get('user_country')); ?>
+    
+</div>
+
+<div class="field_container">
+    <label><b>State</b></label>
+    <?php echo $this->formRow($form->get('user_state')); ?>
+    
+</div>
+
+<div class="field_container">
+    <label><b>City</b></label>
+    <?php echo $this->formRow($form->get('user_city')); ?>
+    
+</div>
+
+<div class="field_container">
+    <label><b>Zip</b></label>
+    <?php echo $this->formRow($form->get('user_zip')); ?>
+    
+</div>
+
+<div class="field_container">
+    <label><b>Address</b></label>
+    <?php echo $this->formRow($form->get('user_address')); ?>
+    
+</div>
+
+<div class="field_container">
+    <label><b>&nbsp;</b></label>
+    <?php echo $this->formRow($form->get('submit')); ?>
+    
+</div>
+
+<?php
+
+echo $this->form()->closeTag();?>
+
+</div>
+
+<?php endif?>

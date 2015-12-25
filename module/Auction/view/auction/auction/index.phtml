@@ -1,0 +1,34 @@
+<h2>This is from Auction</h2>
+
+<?php  
+
+$form = $this->form;
+$form->setAttribute('action', $this->url('auction', array('action' => 'index')));
+$form->prepare();
+
+//echo $this->formCollection($form);
+
+echo $this->form()->openTag($form) . PHP_EOL;
+?>
+
+<div style="width: 420px;margin: 0px auto;border:1px solid red;">
+<div>
+    
+   <?php echo $this->formRow($form->get('title')) . PHP_EOL; ?>
+    
+</div>
+    <br/>
+<div>
+    
+   <?php echo $this->formRow($form->get('artist')) . PHP_EOL; ?>
+    
+</div>
+    
+    <div style="padding-left: 34px;">
+        
+        <?php echo $this->formInput($form->get('submit')) . PHP_EOL;?>
+    </div>
+    
+    <div><?php echo $this->form()->closeTag($form) . PHP_EOL;?></div>
+
+</div>

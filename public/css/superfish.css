@@ -1,0 +1,173 @@
+
+.menu_block {
+    float: right;
+    padding-top: 20px;
+    position: relative;
+    z-index: 999;
+}
+nav > .sf-menu {
+    text-align: center;
+}
+nav {
+    padding: 0;
+    position: relative;
+}
+.sf-menu ul {
+    display: none;
+    position: absolute;
+    top: -999px;
+}
+.sf-menu li {
+    float: left;
+    position: relative;
+}
+.sf-menu > li {
+    background: url("../images/menu_separator.png") no-repeat scroll 0 center rgba(0, 0, 0, 0);
+    float: left;
+    position: relative;
+}
+.sf-menu > li:first-child {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.sf-menu > li > ul > li {
+    float: none;
+    position: static;
+}
+.sf-menu > li > a {
+    border-radius: 6px;
+    color: #8F8F8F;
+    display: block;
+    font-family: 'Lato',sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    padding: 8px 16px 10px;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 999;
+}
+.sf-menu > li.with_ul > a:after {
+    background: url("../images/arrows.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    content: "";
+    height: 5px;
+    left: 50%;
+    margin-left: -4px;
+    pointer-events: none;
+    position: absolute;
+    top: 28px;
+    width: 7px;
+    z-index: 999;
+}
+.sf-menu > li.current > a:after, .sf-menu > li.sfHover > a:after {
+    background-position: 0 bottom;
+}
+.sf-menu > li.sfHover > a, .sf-menu > li.current > a, .sf-menu > li:hover > a:hover {
+    background: url("../images/menu_hover.png") repeat-x scroll 0 0 #FFA402;
+    color: #FFFFFF;
+}
+.sf-menu > li.sfHover, .sf-menu > li.current, .sf-menu > li.sfHover + li, .sf-menu > li.current + li, .sf-menu > li:hover + li, .sf-menu > li:hover {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.sf-menu > li > ul > li > a > span {
+    background: url("../images/arrows.png") no-repeat scroll 0 bottom rgba(0, 0, 0, 0);
+    height: 5px;
+    left: 50%;
+    margin-left: -8px;
+    position: absolute;
+    top: 25px;
+    width: 7px;
+}
+.sf-menu a {
+    color: #FFFEFE;
+    font-size: 16px;
+    line-height: 21px;
+}
+.sf-menu li ul, .sf-menu li.sfHover > ul {
+    left: 0;
+    top: 36px;
+    width: 122px;
+    z-index: 999;
+}
+.sf-menu li ul li {
+    float: none !important;
+    text-align: left;
+}
+.sf-menu li ul li:first-child {
+    border: medium none;
+    padding-top: 0;
+}
+.sf-menu li ul li a {
+    background: url("../images/sub_bg.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    border-radius: 6px;
+    color: #FFFFFF;
+    display: block;
+    font-family: 'Lato',sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    padding: 8px 12px 10px 15px;
+    position: relative;
+    text-transform: uppercase;
+}
+.sf-menu li li a:hover, .sf-menu li.sfHover li.sfHover > a {
+    background: url("../images/menu_hover.png") repeat-x scroll 0 0 #FFA402;
+    color: #FFFFFF;
+}
+.sf-menu li.sfHover li.sfHover ul {
+    position: relative !important;
+    text-align: center;
+    top: 0 !important;
+    width: 97px;
+}
+.sf-menu li li ul li {
+    text-align: center !important;
+}
+.sf-menu li li ul li a {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+@media only screen and (max-width: 995px) {
+.sf-menu > li > a {
+    font-size: 12px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+}
+@media only screen and (max-width: 767px) {
+.menu_block {
+    clear: both;
+    float: none !important;
+    margin: 0 !important;
+    padding: 0 0 20px;
+}
+header nav {
+    color: #927C67;
+    float: none;
+    font: 12px/15px Arial,Helvetica,sans-serif;
+    margin: 0 auto;
+    text-transform: uppercase;
+    width: 100%;
+}
+nav:before {
+    color: #7D7D7D;
+    content: "Menu:";
+    display: block;
+    margin-bottom: 5px;
+}
+.sf-menu {
+    display: none !important;
+    float: none;
+}
+#mm0 {
+    border: 2px solid #E9E9E9;
+    color: #202020;
+    float: none;
+    font: 12px/15px Arial,Helvetica,sans-serif;
+    margin: 0 auto;
+    outline: medium none;
+    width: 100%;
+}
+.search_block {
+    padding-bottom: 10px !important;
+}
+}
